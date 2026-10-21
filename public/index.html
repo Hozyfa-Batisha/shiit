@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shiit</title>
+  <meta name="theme-color" content="#ffd60a">
+  <meta name="description" content="Shiit it out of your head. Then do one thing.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- name screen: just a label, no password -->
+  <section id="gate" hidden>
+    <form id="gateForm" class="gate-card" autocomplete="off">
+      <span class="mark big"><img src="logo.png" alt="Shiit"></span>
+      <h2>Who's this?</h2>
+      <p>Just a name. Your ideas are saved under it. There's no password, so anyone who types the same name gets the same list.</p>
+      <input id="nameInput" maxlength="32" placeholder="Your name" aria-label="Your name" required>
+      <button class="btn go big-btn" type="submit">Let me in</button>
+      <p id="gateErr" class="err" role="alert"></p>
+    </form>
+  </section>
+
+  <main id="app" hidden>
+    <header class="top">
+      <div class="brand">
+        <span class="mark"><img src="logo.png" alt=""></span>
+        <div>
+          <h1>Shiit</h1>
+          <p class="mono sub">Get it out of your head.</p>
+        </div>
+      </div>
+      <div class="who mono">
+        <span id="whoName"></span>
+        <button id="switchUser" class="link" type="button">not you?</button>
+      </div>
+    </header>
+
+    <div class="stats mono">
+      <span>Done today <b id="doneToday">0</b></span>
+      <span>Streak <b id="streak">0</b> d</span>
+    </div>
+
+    <form id="capture" autocomplete="off">
+      <input id="text" maxlength="280" dir="auto" placeholder="Shiit an idea out…" aria-label="New idea">
+      <button class="btn go" type="submit">Shiit it</button>
+    </form>
+    <p id="toast" class="mono" role="status" aria-live="polite"></p>
+
+    <div class="seg" role="group" aria-label="Order of ideas">
+      <button type="button" data-mode="queue" aria-pressed="true"><b>Queue</b><small>oldest first</small></button>
+      <button type="button" data-mode="stack" aria-pressed="false"><b>Stack</b><small>newest first</small></button>
+    </div>
+    <label class="protect" id="protectRow" hidden>
+      <input type="checkbox" id="protect">
+      <span>Protect focus: new ideas go under the top one</span>
+    </label>
+
+    <div id="lane" class="mono"><span id="laneLabel"></span><span id="laneCount"></span></div>
+    <ol id="stack"></ol>
+    <p id="empty" hidden>Head's empty. Enjoy it.</p>
+
+    <footer class="mono">Ctrl + Enter finishes the one that's Now</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
