@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3050;
 const DATA = process.env.DATA_FILE || path.join(__dirname, 'data', 'shiit.json');
 const PUB = path.join(__dirname, 'public');
 const MAX_LEN = 280;
