@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+
+# Local application data
+/config/
+/data/
+
+# Credentials and private keys
+/secrets/
+*.pem
+*.key
+
+# Dependencies and local logs
+/node_modules/
+npm-debug.log*
