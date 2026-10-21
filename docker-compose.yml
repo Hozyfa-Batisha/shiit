@@ -1,0 +1,24 @@
+services:
+  shiit:
+    build: .
+    container_name: shiit
+    restart: unless-stopped
+    user: "${PUID:-1000}:${PGID:-1000}"
+    environment:
+      - TZ=${TZ:-Africa/Cairo}
+      - MAX_USERS=${MAX_USERS:-200}
+    volumes:
+      - ./config:/data
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=${TRAEFIK_NETWORK:-traefik}"
+      - "traefik.http.routers.shiit.rule=Host(`${SHIIT_HOSTNAME?}`)"
+      - "traefik.http.routers.shiit.entrypoints=websecure"
+      - "traefik.http.routers.shiit.tls.certresolver=letsencrypt"
+      - "traefik.http.services.shiit.loadbalancer.server.port=3000"
+
+networks:
+  proxy:
+    external: true
