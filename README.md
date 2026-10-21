@@ -7,14 +7,14 @@ A small self-hosted app for catching ideas the second they show up, without losi
 ## Run it behind Traefik
 
 ```bash
-cp .env.example .env      # set SHIIT_HOSTNAME and TRAEFIK_NETWORK
-mkdir -p config           # data lives here (config/shiit.json)
+cp .env.example .env      # set SHIIT_HOSTNAME
+mkdir -p config           # data lives here (config/shiit.json); the container runs as 1000:1000
 docker compose up -d --build
 ```
 
-The compose file carries the Traefik labels (websecure, `letsencrypt` resolver, `Host(${SHIIT_HOSTNAME})`, port 3000) and joins the external network named in `TRAEFIK_NETWORK`. No ports are published.
+Same shape as the qbittorrent file: external `proxy` network, `expose` instead of published ports, Traefik labels (websecure, `letsencrypt` resolver, `Host(${SHIIT_HOSTNAME})`) pointing at port 3050.
 
-Without Docker: `node server.js` (Node 18+, no dependencies), then open http://localhost:3000.
+Without Docker: `node server.js` (Node 18+, no dependencies), then open http://localhost:3050.
 
 ## How it works
 
