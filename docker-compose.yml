@@ -2,7 +2,6 @@ services:
   shiit:
     build: .
     container_name: shiit
-    user: "1000:1000"
     environment:
       - TZ=Africa/Cairo
       - PORT=3050

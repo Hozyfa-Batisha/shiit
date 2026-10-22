@@ -8,9 +8,13 @@ A small self-hosted app for catching ideas the second they show up, without losi
 
 ```bash
 cp .env.example .env      # set SHIIT_HOSTNAME
-mkdir -p config           # data lives here (config/shiit.json); the container runs as 1000:1000
+mkdir -p config           # data lives here (config/shiit.json)
 docker compose up -d --build
 ```
+
+At startup, the container prepares the mounted `/data` directory and existing
+Shiit data files for its unprivileged app user. This supports bind-mounted
+directories whose host ownership does not match the container's UID.
 
 Same shape as the qbittorrent file: external `proxy` network, `expose` instead of published ports, Traefik labels (websecure, `letsencrypt` resolver, `Host(${SHIIT_HOSTNAME})`) pointing at port 3050.
 
