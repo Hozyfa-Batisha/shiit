@@ -1,7 +1,5 @@
 # Shiit
 
-Shiit it out of your head. Then do one thing.
-
 A small self-hosted app for catching ideas the second they show up, without losing what you're working on.
 
 ## Run it behind Traefik
