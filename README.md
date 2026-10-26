@@ -1,4 +1,11 @@
-# Shiit
+<div align="center">
+  <h1>✦ SHIIT ✦</h1>
+  <p><em>Catch the thought. Keep the focus.</em></p>
+
+  <video src="assets/shiit.webm" autoplay loop muted playsinline controls width="800">
+    <a href="assets/shiit.webm">Watch the Shiit preview</a>
+  </video>
+</div>
 
 A small self-hosted app for catching ideas the second they show up, without losing what you're working on.
 
