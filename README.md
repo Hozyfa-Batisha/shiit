@@ -2,8 +2,10 @@
   <h1>✦ SHIIT ✦</h1>
   <p><em>Catch the thought. Keep the focus.</em></p>
 
-  <video src="assets/shiit.webm" autoplay loop muted playsinline controls width="800">
-    <a href="assets/shiit.webm">Watch the Shiit preview</a>
+  <video autoplay loop muted playsinline controls width="800">
+    <source src="assets/shiit.mp4" type="video/mp4">
+    <source src="assets/shiit.webm" type="video/webm">
+    <a href="assets/shiit.mp4">Watch the Shiit preview</a>
   </video>
 </div>
 
