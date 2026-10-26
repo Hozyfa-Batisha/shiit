@@ -2,11 +2,9 @@
   <h1>✦ SHIIT ✦</h1>
   <p><em>Catch the thought. Keep the focus.</em></p>
 
-  <video autoplay loop muted playsinline controls width="800">
-    <source src="https://github.com/Hozyfa-Batisha/shiit/assets/shiit.mp4" type="video/mp4">
-    <source src="https://github.com/Hozyfa-Batisha/shiit/assets/shiit.webm" type="video/webm">
-    <a href="https://github.com/Hozyfa-Batisha/shiit/assets/shiit.mp4">Watch the Shiit preview</a>
-  </video>
+  <a href="https://github.com/Hozyfa-Batisha/shiit/raw/refs/heads/main/assets/shiit.mp4">
+    <img src="assets/shiit-preview.gif" alt="Shiit app preview — click to watch the full video" width="800">
+  </a>
 </div>
 
 A small self-hosted app for catching ideas the second they show up, without losing what you're working on.
