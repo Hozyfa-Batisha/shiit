@@ -3,9 +3,9 @@
   <p><em>Catch the thought. Keep the focus.</em></p>
 
   <video autoplay loop muted playsinline controls width="800">
-    <source src="assets/shiit.mp4" type="video/mp4">
-    <source src="assets/shiit.webm" type="video/webm">
-    <a href="assets/shiit.mp4">Watch the Shiit preview</a>
+    <source src="https://github.com/Hozyfa-Batisha/shiit/assets/shiit.mp4" type="video/mp4">
+    <source src="https://github.com/Hozyfa-Batisha/shiit/assets/shiit.webm" type="video/webm">
+    <a href="https://github.com/Hozyfa-Batisha/shiit/assets/shiit.mp4">Watch the Shiit preview</a>
   </video>
 </div>
 
